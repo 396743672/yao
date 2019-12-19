@@ -5,13 +5,18 @@
 
     <parent>
         <groupId>com.y3tu</groupId>
-        <artifactId>yao-auth</artifactId>
+        <artifactId>yao-server</artifactId>
         <version>2.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>yao-authentication</artifactId>
-    <name>Yao-Authentication</name>
-    <description>签权服务</description>
+    <artifactId>yao-report-server</artifactId>
+    <packaging>jar</packaging>
+    <name>Yao-Report-Server</name>
+    <description>报表</description>
+
+    <dependencies>
+
+    </dependencies>
 
 </project>

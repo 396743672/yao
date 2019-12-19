@@ -5,32 +5,29 @@
 
     <parent>
         <groupId>com.y3tu</groupId>
-        <artifactId>yao-auth</artifactId>
+        <artifactId>yao-server</artifactId>
         <version>2.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>yao-authorization</artifactId>
-    <name>Yao-Authorization</name>
-    <description>授权服务</description>
+    <packaging>jar</packaging>
+    <artifactId>yao-upms-server</artifactId>
+    <name>Yao-Upms-Server</name>
+    <description>upms(通用权限管理)</description>
 
     <dependencies>
 
-        <!--redis缓存-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-            <optional>true</optional>
+            <groupId>com.y3tu</groupId>
+            <artifactId>yao-common-starter</artifactId>
+            <version>2.0</version>
         </dependency>
 
-        <!--图形验证码-->
         <dependency>
-            <groupId>com.github.whvcse</groupId>
-            <artifactId>easy-captcha</artifactId>
-            <version>1.6.2</version>
+            <groupId>com.y3tu</groupId>
+            <artifactId>yao-log-starter</artifactId>
+            <version>2.0</version>
         </dependency>
 
     </dependencies>
-
-
 </project>

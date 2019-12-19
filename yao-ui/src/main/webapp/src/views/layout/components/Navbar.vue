@@ -28,6 +28,7 @@
         <!--<breadcrumb class="breadcrumb-container"/>-->
 
         <div class="right-menu">
+            <Search id="header-search" class="right-menu-item"></Search>
             <template v-if="device!=='mobile'">
                 <el-tooltip content="全屏" effect="dark" placement="bottom">
                     <screenfull class="screenfull right-menu-item"/>
@@ -70,12 +71,14 @@
 
 <script>
     import {mapGetters} from 'vuex'
+    import Search from '@/components/HeaderSearch'
     import Breadcrumb from '@/components/Breadcrumb'
     import Hamburger from '@/components/Hamburger'
     import Screenfull from '@/components/Screenfull'
 
     export default {
         components: {
+            Search,
             Breadcrumb,
             Hamburger,
             Screenfull

@@ -1,6 +1,7 @@
 <template>
   <div :class="{'show':show}" class="header-search">
-    <svg-icon class-name="search-icon" icon-class="search" @click.stop="click" />
+    <i class="el-icon-delete"></i>
+    <icon :name="search" @click.stop="click" style="margin-top: 3px"></icon>
     <el-select
       ref="headerSearchSelect"
       v-model="search"
@@ -10,8 +11,7 @@
       remote
       placeholder="Search"
       class="header-search-select"
-      @change="change"
-    >
+      @change="change">
       <el-option v-for="item in options" :key="item.path" :value="item" :label="item.title.join(' > ')" />
     </el-select>
   </div>
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     routes() {
-      return this.$store.getters.permission_routes
+      return this.$store.getters.permission_routers
     }
   },
   watch: {
@@ -71,8 +71,8 @@ export default {
     },
     change(val) {
       this.$router.push(val.path)
-      this.search = ''
-      this.options = []
+      this.search = '';
+      this.options = [];
       this.$nextTick(() => {
         this.show = false
       })

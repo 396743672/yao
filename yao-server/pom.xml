@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.y3tu</groupId>
+        <artifactId>yao-cloud</artifactId>
+        <version>2.0</version>
+        <relativePath>../yao-cloud/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>yao-server</artifactId>
+    <name>Yao-Server</name>
+    <packaging>pom</packaging>
+    <description>服务提供模块</description>
+
+    <modules>
+        <module>yao-boot-server</module>
+        <module>yao-generator-server</module>
+        <module>yao-log-server</module>
+        <module>yao-report-server</module>
+        <module>yao-upms-server</module>
+    </modules>
+
+    <dependencies>
+
+    </dependencies>
+
+
+</project>

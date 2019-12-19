@@ -12,7 +12,7 @@
 - 消息队列：RabbitMQ
 - 权限认证：Oauth2
 - 项目部署：Docker
-- 前端框架：Vue ElementUI
+- 前端框架：Vue Element-UI
 
 ## 项目结构说明
 - yao-common 公共模块

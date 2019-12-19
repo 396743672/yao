@@ -3,34 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>yao-gateway</artifactId>
-    <packaging>jar</packaging>
-
-    <name>yao-gateway</name>
-    <description>网关</description>
-
     <parent>
         <groupId>com.y3tu</groupId>
-        <artifactId>yao</artifactId>
-        <version>1.0</version>
+        <artifactId>yao-cloud</artifactId>
+        <version>2.0</version>
+        <relativePath>../yao-cloud/pom.xml</relativePath>
     </parent>
 
-    <properties>
-        <kaptcha.version>0.0.9</kaptcha.version>
-    </properties>
+    <artifactId>yao-gateway</artifactId>
+    <name>Yao-Gateway</name>
+    <description>Yao-Gateway服务网关模块</description>
 
     <dependencies>
 
         <dependency>
             <groupId>com.y3tu</groupId>
             <artifactId>yao-common</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.y3tu</groupId>
-            <artifactId>y3tu-tool-web</artifactId>
-            <version>${y3tu-tool-version}</version>
+            <version>2.0</version>
         </dependency>
 
         <!--api网关-->
@@ -73,24 +62,6 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-        </dependency>
-
-        <!--接口文档-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin-version}</version>
         </dependency>
 
     </dependencies>

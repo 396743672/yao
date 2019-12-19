@@ -3,15 +3,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.y3tu</groupId>
+    <parent>
+        <groupId>com.y3tu</groupId>
+        <artifactId>yao-cloud</artifactId>
+        <version>2.0</version>
+        <relativePath>../yao-cloud/pom.xml</relativePath>
+    </parent>
+
     <artifactId>yao-ui</artifactId>
-    <version>1.0</version>
+    <name>Yao-UI</name>
     <description>使用vue构建的yao前端页面</description>
-    <name>yao-ui</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <build>
         <plugins>
             <!--maven执行node npm对vue工程进行编译打包-->
