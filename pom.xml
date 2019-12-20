@@ -12,11 +12,11 @@
     <description>Yao-Cloud:微服务系统脚手架</description>
 
     <modules>
-        <module>../yao-auth</module>
-        <module>../yao-gateway</module>
-        <module>../yao-server</module>
-        <module>../yao-starter</module>
-        <module>../yao-ui</module>
+        <module>yao-auth</module>
+        <module>yao-gateway</module>
+        <module>yao-server</module>
+        <module>yao-starter</module>
+        <module>yao-ui</module>
     </modules>
 
     <properties>

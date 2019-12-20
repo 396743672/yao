@@ -7,7 +7,6 @@
         <groupId>com.y3tu</groupId>
         <artifactId>yao-auth</artifactId>
         <version>2.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>yao-authentication</artifactId>
