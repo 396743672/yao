@@ -19,26 +19,16 @@
 
         <dependency>
             <groupId>com.y3tu</groupId>
-            <artifactId>yao-common</artifactId>
-            <version>1.0</version>
+            <artifactId>yao-common-starter</artifactId>
+            <version>2.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.y3tu</groupId>
             <artifactId>yao-log-starter</artifactId>
-            <version>1.0</version>
+            <version>2.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.y3tu</groupId>
-            <artifactId>y3tu-tool-web</artifactId>
-            <version>${y3tu-tool-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
@@ -50,11 +40,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -77,18 +62,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus-starter.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin-version}</version>
         </dependency>
 
     </dependencies>

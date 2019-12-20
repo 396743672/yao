@@ -16,8 +16,6 @@ import com.y3tu.yao.upms.service.UserRoleService;
 import com.y3tu.tool.core.date.DateUtil;
 import com.y3tu.tool.core.pojo.R;
 import com.y3tu.tool.web.base.controller.BaseController;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -53,7 +51,6 @@ public class ResourceController extends BaseController<ResourceService, Resource
      * @return
      */
     @Log(actionName = "根据token查询当前用户权限的菜单树")
-    @ApiOperation(value = "获取当前用户的菜单树", notes = "根据token查询当前用户权限的菜单树", httpMethod = "GET")
     @GetMapping("/menu/tree/{userId}")
     public R getMenuTree(@PathVariable("userId") String userId) {
         List<Role> roleList = userRoleService.findByUserId(userId);
@@ -67,7 +64,6 @@ public class ResourceController extends BaseController<ResourceService, Resource
      * @return
      */
     @Log(actionName = "获取所有的菜单树")
-    @ApiOperation(value = "获取当前用户的菜单树", notes = "获取所有的菜单树", httpMethod = "GET")
     @GetMapping("/menu/getAllMenuTree")
     public R getAllMenuTree() {
         return R.success(resourceService.getAllResourceTree());
@@ -130,7 +126,6 @@ public class ResourceController extends BaseController<ResourceService, Resource
      * @param ids
      * @return
      */
-    @ApiOperation(value = "批量通过ids删除")
     @DeleteMapping(value = "/delByIds/{ids}")
     @Log(actionName = "删除资源", actionType = ActionTypeEnum.DELETE)
     @Override
@@ -153,8 +148,6 @@ public class ResourceController extends BaseController<ResourceService, Resource
      *
      * @param roleCode
      */
-    @ApiOperation(value = "根据角色查询资源信息", notes = "根据角色查询资源信息", httpMethod = "GET")
-    @ApiImplicitParam(name = "roleCode", value = "角色code", required = true, dataType = "string")
     @GetMapping("/role/{roleCode}")
     public Set<ResourceVO> listResourceByRole(@PathVariable("roleCode") String roleCode) {
 

@@ -14,7 +14,8 @@ import org.springframework.context.annotation.Configuration;
  * @author y3tu
  */
 @Configuration
-public class RabbitMqConfig {
+public class RabbitMqConfigure {
+
     @Bean
     public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
         RabbitTemplate template = new RabbitTemplate(connectionFactory);

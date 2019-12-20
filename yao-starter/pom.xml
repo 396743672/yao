@@ -14,8 +14,9 @@
     <name>Yao-Starter</name>
 
     <modules>
-        <module>yao-log-starter</module>
         <module>yao-common-starter</module>
+        <module>yao-log-starter</module>
+        <module>yao-swagger2-starter</module>
     </modules>
 
 </project>

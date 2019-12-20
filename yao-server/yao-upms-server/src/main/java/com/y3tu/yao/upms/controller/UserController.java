@@ -25,9 +25,6 @@ import com.y3tu.yao.upms.model.entity.Role;
 import com.y3tu.yao.upms.model.entity.User;
 import com.y3tu.yao.upms.model.entity.UserRole;
 import com.y3tu.yao.upms.service.*;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +46,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/user")
 @Slf4j
-@Api("用户接口")
 @Log(serverName = ServerNameConstants.UPMS_SERVER, moduleName = "用户管理")
 public class UserController extends BaseController<UserService, User> {
 
@@ -74,7 +70,6 @@ public class UserController extends BaseController<UserService, User> {
      * @return
      */
     @GetMapping(value = "/info")
-    @ApiOperation(value = "获取当前登录用户接口")
     @Log(actionName = "获取当前登录用户信息")
     public R getUserInfo() {
         String userId = UserUtil.getUserId(request);
@@ -82,7 +77,6 @@ public class UserController extends BaseController<UserService, User> {
     }
 
     @PostMapping(value = "/register")
-    @ApiOperation(value = "注册用户")
     public R register(@ModelAttribute User u,
                       @RequestParam String verify,
                       @RequestParam String captchaId) {
@@ -128,7 +122,6 @@ public class UserController extends BaseController<UserService, User> {
 
     @PostMapping(value = "/unlock")
     @Log(actionName = "页面解锁", actionType = ActionTypeEnum.OTHER)
-    @ApiOperation(value = "解锁验证密码")
     public R unLock(@RequestBody UserDTO userDTO) {
 
         User user = userService.getById(userDTO.getId());
@@ -145,7 +138,6 @@ public class UserController extends BaseController<UserService, User> {
      * @return
      */
     @Override
-    @ApiOperation(value = "多条件分页获取用户列表")
     @MethodMapping(method = RequestMethod.POST)
     @Log(actionName = "查询用户分页数据")
     public R page(@RequestBody PageInfo pageInfo) {
@@ -185,8 +177,7 @@ public class UserController extends BaseController<UserService, User> {
 
     @GetMapping(value = "/disable/{userId}")
     @Log(actionName = "后台禁用用户", actionType = ActionTypeEnum.EDIT)
-    @ApiOperation(value = "后台禁用用户")
-    public R disable(@ApiParam("用户唯一id标识") @PathVariable String userId) {
+    public R disable(@PathVariable String userId) {
         User user = userService.getById(userId);
         if (user == null) {
             return R.warn("通过userId获取用户失败");
@@ -198,8 +189,7 @@ public class UserController extends BaseController<UserService, User> {
 
     @RequestMapping(value = "/enable/{userId}", method = RequestMethod.POST)
     @Log(actionName = "后台启用用户", actionType = ActionTypeEnum.EDIT)
-    @ApiOperation(value = "后台启用用户")
-    public R enable(@ApiParam("用户唯一id标识") @PathVariable String userId) {
+    public R enable(@PathVariable String userId) {
 
         User user = userService.getById(userId);
         if (user == null) {
@@ -210,7 +200,6 @@ public class UserController extends BaseController<UserService, User> {
         return R.success();
     }
 
-    @ApiOperation(value = "批量通过ids删除")
     @DeleteMapping(value = "/delByIds/{ids}")
     @Log(actionName = "删除用户", actionType = ActionTypeEnum.DELETE)
     @Override
@@ -225,7 +214,6 @@ public class UserController extends BaseController<UserService, User> {
 
     @PostMapping(value = "/save")
     @Log(actionName = "新增用户", actionType = ActionTypeEnum.ADD)
-    @ApiOperation(value = "添加用户")
     public R save(@RequestBody UserDTO userDTO) {
         if (StrUtil.isBlank(userDTO.getUsername())) {
             return R.error("缺少必需表单字段");

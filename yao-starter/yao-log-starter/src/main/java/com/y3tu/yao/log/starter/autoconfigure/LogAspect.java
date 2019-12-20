@@ -37,7 +37,7 @@ public class LogAspect {
     @Autowired
     private RabbitTemplate rabbitTemplate;
     @Autowired
-    private LogPropertiesConfig logPropertiesConfig;
+    private LogProperties logProperties;
 
     /**
      * 配置切入点
@@ -119,8 +119,8 @@ public class LogAspect {
         } else if (logAnnotation.saveMode() == SaveModeEnum.ES) {
             logQueue = LogQueueNameConstant.ES_LOG_QUEUE;
         } else {
-            if (StrUtil.isNotEmpty(logPropertiesConfig.getSaveMode())) {
-                String saveMode = logPropertiesConfig.getSaveMode();
+            if (StrUtil.isNotEmpty(logProperties.getSaveMode())) {
+                String saveMode = logProperties.getSaveMode();
                 if ("ES".equals(saveMode)) {
                     logQueue = LogQueueNameConstant.ES_LOG_QUEUE;
                 } else {

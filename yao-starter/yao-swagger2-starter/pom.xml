@@ -5,25 +5,34 @@
 
     <parent>
         <groupId>com.y3tu</groupId>
-        <artifactId>yao-server</artifactId>
+        <artifactId>yao-starter</artifactId>
         <version>2.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>yao-boot-server</artifactId>
+    <artifactId>yao-swagger2-starter</artifactId>
     <packaging>jar</packaging>
-    <name>Yao-Boot-Server</name>
-    <description>后台管理启动项目</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <name>Yao-Swagger2-Starter</name>
+    <description>Swagger2接口api，需集成此依赖</description>
 
     <dependencies>
+
         <dependency>
             <groupId>com.y3tu</groupId>
             <artifactId>yao-common-starter</artifactId>
             <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
         </dependency>
 
     </dependencies>

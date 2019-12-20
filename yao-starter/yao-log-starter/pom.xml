@@ -19,8 +19,8 @@
 
         <dependency>
             <groupId>com.y3tu</groupId>
-            <artifactId>yao-common</artifactId>
-            <version>${parent.version}</version>
+            <artifactId>yao-common-starter</artifactId>
+            <version>2.0</version>
         </dependency>
 
         <!--spring aop 切面-->

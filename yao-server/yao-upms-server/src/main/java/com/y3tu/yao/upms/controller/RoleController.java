@@ -11,7 +11,6 @@ import com.y3tu.tool.core.date.DateUtil;
 import com.y3tu.tool.core.pojo.R;
 import com.y3tu.tool.web.base.controller.BaseController;
 import com.y3tu.tool.web.base.pojo.PageInfo;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,7 +42,6 @@ public class RoleController extends BaseController<RoleService, Role> {
     @Autowired
     private DepartmentService departmentService;
 
-    @ApiOperation(value = "分页获取角色")
     @PostMapping("/page")
     @Log(actionName = "查询角色分页数据")
     @Override
@@ -68,7 +66,6 @@ public class RoleController extends BaseController<RoleService, Role> {
 
     @RequestMapping(value = "/setDefault", method = RequestMethod.POST)
     @Log(actionName = "设置或取消默认角色", actionType = ActionTypeEnum.EDIT)
-    @ApiOperation(value = "设置或取消默认角色")
     public R setDefault(@RequestParam String id, @RequestParam Boolean isDefault) {
 
         Role role = roleService.getById(id);
@@ -86,7 +83,6 @@ public class RoleController extends BaseController<RoleService, Role> {
      * @param role 保存的数据
      * @return
      */
-    @ApiOperation(value = "保存", httpMethod = "POST")
     @PostMapping("/save")
     @Log(actionName = "新增角色", actionType = ActionTypeEnum.ADD)
     @Override
@@ -104,7 +100,6 @@ public class RoleController extends BaseController<RoleService, Role> {
      * @param role 更新的数据
      * @return
      */
-    @ApiOperation(value = "更新", httpMethod = "PUT")
     @PutMapping("/update")
     @Log(actionName = "更新角色", actionType = ActionTypeEnum.EDIT)
     @Override
@@ -117,7 +112,6 @@ public class RoleController extends BaseController<RoleService, Role> {
 
     @RequestMapping(value = "/editRoleResource", method = RequestMethod.POST)
     @Log(actionName = "编辑角色分配菜单权限", actionType = ActionTypeEnum.EDIT)
-    @ApiOperation(value = "编辑角色分配菜单权限")
     public R editRoleResource(@RequestBody Map params) {
 
         String roleId = (String) params.get("roleId");
@@ -137,7 +131,6 @@ public class RoleController extends BaseController<RoleService, Role> {
 
     @RequestMapping(value = "/editRoleDepartment", method = RequestMethod.POST)
     @Log(actionName = "编辑角色分配数据权限", actionType = ActionTypeEnum.EDIT)
-    @ApiOperation(value = "编辑角色分配数据权限")
     public R editRoleDepartment(@RequestBody Map params) {
 
         String roleId = (String) params.get("roleId");
@@ -159,7 +152,6 @@ public class RoleController extends BaseController<RoleService, Role> {
         return R.success();
     }
 
-    @ApiOperation(value = "批量通过ids删除")
     @DeleteMapping(value = "/delByIds/{ids}")
     @Log(actionName = "删除角色", actionType = ActionTypeEnum.DELETE)
     @Override

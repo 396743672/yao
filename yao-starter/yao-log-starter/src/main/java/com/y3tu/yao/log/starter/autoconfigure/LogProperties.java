@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Data
 @ConfigurationProperties(prefix = "yao.log")
 @Component
-public class LogPropertiesConfig {
+public class LogProperties {
     /**
      * 默认保存模式为数据库
      * db 数据库保存

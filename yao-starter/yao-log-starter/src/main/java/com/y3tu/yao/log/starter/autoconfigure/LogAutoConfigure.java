@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConditionalOnClass(LogAspect.class)
-@EnableConfigurationProperties(LogPropertiesConfig.class)
-public class LogAutoConfiguration {
+@EnableConfigurationProperties(LogProperties.class)
+public class LogAutoConfigure {
 
     @Bean
     @ConditionalOnMissingBean(LogAspect.class)
