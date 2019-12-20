@@ -24,6 +24,13 @@
 
     <dependencies>
 
+        <!-- p6spy sql输出格式-->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>3.8.5</version>
+        </dependency>
+
     </dependencies>
 
 
