@@ -29,13 +29,6 @@
             <version>2.0.71</version>
         </dependency>
 
-        <!--Mybatis增强工具-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-
         <!--解析jwt-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -61,10 +54,16 @@
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
 
-        <!--服务发现和配置中心-->
+        <!--配置中心-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!--服务发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
         </dependency>
 
         <!--服务调用-->

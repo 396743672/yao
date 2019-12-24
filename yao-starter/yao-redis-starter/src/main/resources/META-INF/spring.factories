@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.y3tu.yao.log.starter.LogAutoConfigure
+com.y3tu.yao.redis.starter.RedisAutoConfigure

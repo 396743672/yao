@@ -1,5 +1,7 @@
-package com.y3tu.yao.log.starter.autoconfigure;
+package com.y3tu.yao.log.starter;
 
+import com.y3tu.yao.log.starter.aspect.LogAspect;
+import com.y3tu.yao.log.starter.configure.LogProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

@@ -15,6 +15,7 @@
     <modules>
         <module>yao-common-starter</module>
         <module>yao-log-starter</module>
+        <module>yao-redis-starter</module>
         <module>yao-swagger2-starter</module>
     </modules>
 

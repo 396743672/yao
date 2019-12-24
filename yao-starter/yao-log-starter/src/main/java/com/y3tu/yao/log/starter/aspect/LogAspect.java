@@ -1,7 +1,8 @@
-package com.y3tu.yao.log.starter.autoconfigure;
+package com.y3tu.yao.log.starter.aspect;
 
 import com.y3tu.tool.core.http.IpUtil;
 import com.y3tu.yao.common.util.UserUtil;
+import com.y3tu.yao.log.starter.configure.LogProperties;
 import com.y3tu.yao.log.starter.constant.LogQueueNameConstant;
 import com.y3tu.yao.log.starter.constant.LogStatusEnum;
 import com.y3tu.yao.log.starter.model.dto.LogDTO;

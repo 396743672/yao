@@ -5,18 +5,14 @@
 
     <parent>
         <groupId>com.y3tu</groupId>
-        <artifactId>yao-server</artifactId>
+        <artifactId>yao-starter</artifactId>
         <version>2.0</version>
     </parent>
 
-    <artifactId>yao-generator-server</artifactId>
-    <name>Yao-Generator-Server</name>
-    <description>代码生成</description>
+    <artifactId>yao-redis-starter</artifactId>
     <packaging>jar</packaging>
-
-    <properties>
-        <velocity.version>1.7</velocity.version>
-    </properties>
+    <name>Yao-Redis-Starter</name>
+    <description>Redis缓存支撑</description>
 
     <dependencies>
 
@@ -27,17 +23,11 @@
         </dependency>
 
         <dependency>
-            <groupId>com.y3tu</groupId>
-            <artifactId>yao-log-starter</artifactId>
-            <version>2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>${velocity.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
     </dependencies>
-    
+
+
 </project>

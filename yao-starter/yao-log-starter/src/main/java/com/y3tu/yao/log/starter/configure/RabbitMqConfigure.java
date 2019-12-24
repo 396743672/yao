@@ -1,4 +1,4 @@
-package com.y3tu.yao.log.starter.autoconfigure;
+package com.y3tu.yao.log.starter.configure;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;

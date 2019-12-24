@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @author y3tu
- * @date 2019-05-09
  */
 @FeignClient(name = ServerNameConstants.AUTHENTICATION_SERVER, configuration = AuthenticationService.UserFeignConfig.class)
 public interface AuthenticationService {

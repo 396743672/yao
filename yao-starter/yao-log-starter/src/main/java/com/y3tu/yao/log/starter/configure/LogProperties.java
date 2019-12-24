@@ -1,4 +1,4 @@
-package com.y3tu.yao.log.starter.autoconfigure;
+package com.y3tu.yao.log.starter.configure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
